@@ -65,6 +65,11 @@ body {
     padding-right: 46px;
 }
 
+.nav-links li a:hover .chevron-down {
+    transform: rotate(180deg);
+    transition: .6s;
+}
+
 .connect-btn {
     background-color: #007ABB;
     border: none;
@@ -182,7 +187,7 @@ body {
     transform: translateY(-1px);
 }
 
-.common-btn:hover .arrow{
+.common-btn:hover .arrow {
     transform: rotate(45deg);
     transition: .6s;
 }
