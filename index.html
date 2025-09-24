@@ -149,11 +149,12 @@
         <!-- Video Section -->
         <div class="video-box">
             <div class="video-btn">
-                <button type="button" id="playVideoBtn">
-                    <img src="assets/images/play-btn.svg" alt="Play">
+                <button type="button" id="playVideoBtn" class="v-play-btn">
+                    <i class="fas fa-play play-icon"></i>
                 </button>
             </div>
         </div>
+
         <!-- Video Modal -->
         <div class="video-modal" id="videoModal">
             <div class="video-modal-content">
@@ -263,6 +264,7 @@
                         <li>Basic support</li>
                         <li>5 projects</li>
                         <li>Email reports</li>
+                             <li>Monthly updates</li> 
                     </ul>
                     <a href="#" class="common-btn"><span>Choose Starter</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -276,6 +278,7 @@
                         <li>Priority support</li>
                         <li>Unlimited projects</li>
                         <li>Advanced analytics</li>
+                          <li>Team collaboration</li>
                     </ul>
                     <a href="#" class="common-btn"><span>Choose Pro</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -288,6 +291,7 @@
                         <li>Dedicated manager</li>
                         <li>Custom SLAs</li>
                         <li>Security reviews</li>
+                         <li>Priority onboarding</li>
                     </ul>
                     <a href="#" class="common-btn"><span>Contact Sales</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -302,7 +306,7 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="top-content">
-                <div class="common-btn2">
+                <div class="common-btn2" style="max-width: 150px;">
                     <img src="assets/images/Ellipse 53.svg" class="ellipse" alt="">
                     <span>Testimonials</span>
                 </div>
@@ -551,7 +555,7 @@
                     <input type="text" name="subject" placeholder="Subject">
                 </div>
                 <textarea name="message" rows="5" placeholder="Message"></textarea>
-                <button type="submit" class="connect-btn">Send Message</button>
+                <button type="submit" class="connect-btn">Send Message <i class="fa-regular fa-paper-plane" style="rotate: 8deg;"></i></button>
             </form>
         </div>
     </section>
@@ -561,30 +565,30 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <div class="navbar-brand">Test Site</div>
-                <p>Secure solutions to help you work smarter and grow faster.</p>
+                <div class="navbar-brand">Logo</div>
+                <p>Delivering secure, scalable solutions designed to enhance workflow, simplify processes, and help teams work smarter, collaborate better, and grow faster in today’s fast-paced digital environment.</p>
             </div>
             <div class="footer-col">
                 <h6>Company</h6>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">About</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Careers</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h6>Services</h6>
                 <ul>
-                    <li><a href="#">Managed IT</a></li>
-                    <li><a href="#">Cloud</a></li>
-                    <li><a href="#">Security</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Managed IT</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Cloud</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Security</a></li>
                 </ul>
             </div>
             <div class="footer-col newsletter">
                 <h6>Subscribe</h6>
                 <form id="newsletterForm" class="newsletter-form">
                     <input type="email" placeholder="Email address" required>
-                    <button type="submit" class="btn btn-primary connect-btn">Join</button>
+                    <button type="submit" class="joint-btn">Join</button>
                 </form>
                 <div class="social">
                     <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
@@ -594,7 +598,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© <span id="year"></span> Rubel | All rights reserved.</p>
+            <p>© <span id="year"></span> Md. Rubel Hossain | All rights reserved.</p>
         </div>
     </footer>
     <!-- Footer End -->

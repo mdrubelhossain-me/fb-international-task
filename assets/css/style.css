@@ -90,7 +90,8 @@ body {
 
 .btn.btn-primary:hover,
 .connect-btn:hover {
-    background-color: #0274b1;
+    background-color: #015988;
+    transition: .6s;
 }
 
 /* Dropdown */
@@ -357,7 +358,6 @@ body {
     color: #999999;
 }
 
-/* Video Section */
 .video-box {
     max-width: 1360px;
     height: 589px;
@@ -366,9 +366,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
     border-radius: 16px;
     position: relative;
+    overflow: hidden;
 }
 
 .video-btn {
@@ -377,16 +377,81 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3));
 }
 
-.video-box button {
-    background-color: transparent;
-    position: absolute;
+.v-play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #0274b1;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    box-shadow: 0 0 20px rgba(3,219,172,0.5);
+    transition: transform 0.3s ease;
 }
+
+.v-play-btn:hover {
+    transform: scale(1.1);
+}
+
+.v-play-btn .play-icon {
+    color: #fff;
+    font-size: 24px;
+}
+
+/* Smooth Ripple / Water Drop Effect */
+.v-play-btn::before,
+.v-play-btn::after,
+.v-play-btn span {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.4);
+    top: -3px;
+    left: -3px;
+    transform: scale(0);
+    opacity: 0.8;
+    animation: smoothRipple 2s infinite ease-out;
+}
+
+.v-play-btn::after {
+    animation-delay: 0.5s;
+}
+
+.v-play-btn span {
+    animation-delay: 1s;
+}
+
+@keyframes smoothRipple {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+        filter: blur(3px);
+    }
+}
+
+
 
 /* Modal Styles */
 .video-modal {
@@ -513,6 +578,15 @@ body {
     padding: 24px;
 
 }
+.service-container .s-cards .card:hover{
+box-shadow: 
+    0 8px 20px rgba(2, 122, 187, 0.15),   /* main bottom shadow */
+    2px 4px 10px rgba(2, 122, 187, 0.05), /* subtle right side */
+   -2px 4px 10px rgba(2, 122, 187, 0.05); /* subtle left side */
+
+    transform: translateY(-2px);
+    transition: .6s;
+}
 
 .service-container .s-cards .card img {
     margin-top: 29px;
@@ -603,10 +677,16 @@ body {
 }
 
 .price-card ul {
-    list-style: none;
+    list-style-type: disc; 
+    color: #0079ba;          
     padding: 0;
-    margin: 16px 0 24px 0;
+    margin: 16px 0 24px 18px;
 }
+
+.price-card ul li::marker {
+    color: #0079ba;
+}
+
 
 .price-card ul li {
     padding: 8px 0;
@@ -866,7 +946,6 @@ body {
 
 .masonry-item {
     position: relative;
-    /* needed for overlay positioning */
     display: inline-block;
     width: 100%;
     margin-bottom: 16px;
@@ -881,7 +960,7 @@ body {
     transform: scale(1.02);
 }
 
-/* Individual Heights (example) */
+/* Individual Heights */
 .masonry-item:nth-child(1) {
     height: 300px;
 }
@@ -962,17 +1041,19 @@ body {
 .overlay a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
+    font-weight: 400;
+    border: 1px solid #fff;
+    border-radius: 40px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .overlay a:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: black;
+    transition: .6s;
 }
 
 /* Portfolio End */
@@ -1002,6 +1083,7 @@ body {
 .contact-info h2 {
     font-size: 42px;
     margin: 0 0 12px 0;
+    color: #4f4e4e;
 }
 
 .contact-info p {
@@ -1090,12 +1172,16 @@ body {
     color: #fff;
     font-size: 28px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .footer-brand p {
     margin-top: 8px;
     color: #94A3B8;
     max-width: 360px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
 }
 
 .footer-col h6 {
@@ -1113,14 +1199,19 @@ body {
 .footer-col ul li {
     padding: 6px 0;
 }
-
+.footer-col ul li .fa-chevron-right{
+ font-size: 12px;
+}
 .footer-col ul li a {
+    font-size: 14px;
     color: #B6C2CF;
     text-decoration: none;
 }
 
 .footer-col ul li a:hover {
     color: #fff;
+    transition: .6s;
+    padding-left: 5px;
 }
 
 .newsletter-form {
@@ -1136,6 +1227,20 @@ body {
     color: #E2E8F0;
     border-radius: 10px;
     padding: 10px 12px;
+}
+.newsletter-form .joint-btn{
+ background-color: #007ABB;
+    font-size: 15px;
+    border: none;
+    padding: 14px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+ .newsletter-form .joint-btn:hover{
+    background-color: #015988;
+    transition: .6s;
 }
 
 .social a {
@@ -1161,6 +1266,7 @@ body {
     padding: 16px 40px;
     text-align: center;
     color: #94A3B8;
+    font-size: 14px;
 }
 
 /* Footer End */
