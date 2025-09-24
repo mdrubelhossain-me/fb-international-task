@@ -108,6 +108,31 @@ document.querySelectorAll(".accordion-header").forEach(function (btn) {
 });
 // FAQ ACCORDION End
 
+/* Button (Scrolling Bottom to Top) Start */
+var mybtn = document.getElementById("scroll-bottom-top");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    mybtn.style.opacity = "1";
+  } else {
+    mybtn.style.opacity = "0";
+  }
+}
+
+mybtn.addEventListener("click", topFunction);
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+/* Button (Scrolling Bottom to Top) End */
+
 // FOOTER YEAR
 const yearEl = document.getElementById("year");
 if (yearEl) {

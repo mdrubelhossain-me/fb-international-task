@@ -8,6 +8,8 @@
     <!-- Slick CSS (for testimonials slider) -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!--AOS-->
+    <link rel="stylesheet" href="assets/css/aos.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- Style Css -->
@@ -65,7 +67,7 @@
 
     <!-- Hero Start -->
     <section class="hero-container">
-        <div class="top-content">
+        <div class="top-content" data-aos="fade-up">
             <h1>Unlashing Growth through secure solution</h1>
             <p>we help your organization grow faster work smarter & secure by equipping you with the right digital
                 technology</p>
@@ -264,7 +266,7 @@
                         <li>Basic support</li>
                         <li>5 projects</li>
                         <li>Email reports</li>
-                             <li>Monthly updates</li> 
+                        <li>Monthly updates</li>
                     </ul>
                     <a href="#" class="common-btn"><span>Choose Starter</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -278,7 +280,7 @@
                         <li>Priority support</li>
                         <li>Unlimited projects</li>
                         <li>Advanced analytics</li>
-                          <li>Team collaboration</li>
+                        <li>Team collaboration</li>
                     </ul>
                     <a href="#" class="common-btn"><span>Choose Pro</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -291,7 +293,7 @@
                         <li>Dedicated manager</li>
                         <li>Custom SLAs</li>
                         <li>Security reviews</li>
-                         <li>Priority onboarding</li>
+                        <li>Priority onboarding</li>
                     </ul>
                     <a href="#" class="common-btn"><span>Contact Sales</span>
                         <div class="arrow"><img src="assets/images/arrowup.svg" class="arrow-icon" alt=""></div>
@@ -555,7 +557,8 @@
                     <input type="text" name="subject" placeholder="Subject">
                 </div>
                 <textarea name="message" rows="5" placeholder="Message"></textarea>
-                <button type="submit" class="connect-btn">Send Message <i class="fa-regular fa-paper-plane" style="rotate: 8deg;"></i></button>
+                <button type="submit" class="connect-btn">Send Message <i class="fa-regular fa-paper-plane"
+                        style="rotate: 8deg;"></i></button>
             </form>
         </div>
     </section>
@@ -566,7 +569,9 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div class="navbar-brand">Logo</div>
-                <p>Delivering secure, scalable solutions designed to enhance workflow, simplify processes, and help teams work smarter, collaborate better, and grow faster in today’s fast-paced digital environment.</p>
+                <p>Delivering secure, scalable solutions designed to enhance workflow, simplify processes, and help
+                    teams work smarter, collaborate better, and grow faster in today’s fast-paced digital environment.
+                </p>
             </div>
             <div class="footer-col">
                 <h6>Company</h6>
@@ -606,19 +611,28 @@
 
 
 
+    <!-- Scroll Bottom To Top -->
+    <button type="button" id="scroll-bottom-top" title="Go to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Scroll Bottom To Top -->
 
 
 
-    <!-- jQuery + Slick JS (for testimonials slider) -->
+    <!-- jQuery -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
+    <!--AOS-->
+    <script src="assets/js/aos.js"></script>
     <!-- Font Awesome JS -->
     <script src="assets/js/all.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
     <script>
-
-
+        AOS.init({
+            once: true,
+            duration: 1500
+        });
     </script>
 </body>
 
